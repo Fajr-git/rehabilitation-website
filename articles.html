@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المقالات</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="toggle-container">
+    <div class="toggle" onclick="toggleDarkMode()"></div>
+</div>
+
+<h1>المقالات التوعوية</h1>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html" class="active">المقالات</a>
+    <a href="exercises.html">التمارين</a>
+    <a href="tips.html">النصائح</a>
+    <a href="contact.html">تواصل</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3><i class="fa-solid fa-comments"></i> تأخر النطق</h3>
+<p>
+يُعرّف تأخر النطق بأنه تأخر الطفل في اكتساب اللغة أو الكلام مقارنةً بأقرانه،
+وقد يكون مرتبطًا بعوامل سمعية أو بيئية أو تطورية.
+التدخل المبكر مع أخصائي النطق يساهم في تحسين المهارات اللغوية بشكل واضح.
+</p>
+<p class="small-text">المصدر: منظمة الصحة العالمية</p>
+</div>
+
+<div class="card">
+<h3><i class="fa-solid fa-ear-listen"></i> أهمية التحفيز اللغوي</h3>
+<p>
+القراءة اليومية، التحدث المستمر مع الطفل، واستخدام الصور والألعاب التعليمية
+من الوسائل الفعالة لدعم تطور اللغة.
+</p>
+<p class="small-text">المصدر: برامج التدخل المبكر</p>
+</div>
+
+<div class="card">
+<h3><i class="fa-solid fa-person-walking"></i> العلاج الطبيعي</h3>
+<p>
+العلاج الطبيعي يساعد على تحسين الحركة، التوازن، القوة العضلية،
+والاعتماد الوظيفي من خلال خطط علاجية وتمارين مدروسة حسب الحالة.
+</p>
+<p class="small-text">المصدر: ممارسات التأهيل الطبي</p>
+</div>
+
+</div>
+
+<footer>
+© 2026
+<p>تم تنفيذ الموقع بواسطة: فجر العيوني</p>
+</footer>
+
+<button class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+    } else {
+        localStorage.setItem("mode", "light");
+    }
+}
+window.onload = function() {
+    if(localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+}
+</script>
+
+</body>
+</html>

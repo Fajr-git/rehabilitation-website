@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التمارين</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="toggle-container">
+    <div class="toggle" onclick="toggleDarkMode()"></div>
+</div>
+
+<h1>التمارين اليومية</h1>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">المقالات</a>
+    <a href="exercises.html" class="active">التمارين</a>
+    <a href="tips.html">النصائح</a>
+    <a href="contact.html">تواصل</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2><i class="fa-solid fa-comment-dots"></i> تمارين النطق</h2>
+<p><strong>١.</strong> تكرار الكلمات البسيطة يوميًا.</p>
+<p><strong>٢.</strong> تقليد الأصوات مثل الحيوانات والحروف.</p>
+<p><strong>٣.</strong> استخدام بطاقات الصور لتسمية الأشياء.</p>
+<p><strong>٤.</strong> تمارين النفخ لتحسين عضلات الفم.</p>
+</div>
+
+<div class="card">
+<h2><i class="fa-solid fa-person-walking"></i> تمارين العلاج الطبيعي</h2>
+<p><strong>١.</strong> تمارين التمدد العضلي.</p>
+<p><strong>٢.</strong> تمارين التوازن أثناء الوقوف.</p>
+<p><strong>٣.</strong> المشي التدريجي داخل المنزل.</p>
+<p><strong>٤.</strong> تمارين تقوية الأطراف بإشراف مختص.</p>
+</div>
+
+<div class="card">
+<p class="warning">
+⚠️ هذه التمارين إرشادية ولا تغني عن استشارة أخصائي
+</p>
+</div>
+
+</div>
+
+<footer>
+© 2026
+<p>تم تنفيذ الموقع بواسطة: فجر العيوني</p>
+</footer>
+
+<button class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+    } else {
+        localStorage.setItem("mode", "light");
+    }
+}
+window.onload = function() {
+    if(localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+}
+</script>
+
+</body>
+</html>

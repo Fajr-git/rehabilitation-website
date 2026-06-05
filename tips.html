@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>النصائح</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="toggle-container">
+    <div class="toggle" onclick="toggleDarkMode()"></div>
+</div>
+
+<h1>النصائح اليومية</h1>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">المقالات</a>
+    <a href="exercises.html">التمارين</a>
+    <a href="tips.html" class="active">النصائح</a>
+    <a href="contact.html">تواصل</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card"><i class="fa-solid fa-check"></i> خصص وقتًا يوميًا للتمارين.</div>
+<div class="card"><i class="fa-solid fa-check"></i> اجعل التدريب ممتعًا باستخدام اللعب.</div>
+<div class="card"><i class="fa-solid fa-check"></i> كرر الكلمات والجمل باستمرار.</div>
+<div class="card"><i class="fa-solid fa-check"></i> شجع الطفل دون ضغط.</div>
+<div class="card"><i class="fa-solid fa-check"></i> راقب التحسن التدريجي.</div>
+<div class="card"><i class="fa-solid fa-check"></i> استخدم الصور والقصص.</div>
+<div class="card"><i class="fa-solid fa-check"></i> استشر المختص عند الحاجة.</div>
+<div class="card"><i class="fa-solid fa-check"></i> تجنب المقارنات السلبية.</div>
+<div class="card"><i class="fa-solid fa-check"></i> وفر بيئة داعمة نفسيًا.</div>
+<div class="card"><i class="fa-solid fa-check"></i> الصبر والاستمرارية أساس النجاح.</div>
+
+</div>
+
+<footer>
+© 2026
+<p>تم تنفيذ الموقع بواسطة: فجر العيوني</p>
+</footer>
+
+<button class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+    } else {
+        localStorage.setItem("mode", "light");
+    }
+}
+window.onload = function() {
+    if(localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+}
+</script>
+
+</body>
+</html>

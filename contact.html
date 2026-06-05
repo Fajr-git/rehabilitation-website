@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="toggle-container">
+    <div class="toggle" onclick="toggleDarkMode()"></div>
+</div>
+
+<h1>تواصل معنا</h1>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">المقالات</a>
+    <a href="exercises.html">التمارين</a>
+    <a href="tips.html">النصائح</a>
+    <a href="contact.html" class="active">تواصل</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+<p><i class="fa-solid fa-phone"></i> <span dir="ltr" style="unicode-bidi:bidi-override; font-weight:bold;">016 335 0080</span></p>
+<p><i class="fa-solid fa-location-dot"></i> منطقة القصيم - البكيرية</p>
+</div>
+
+</div>
+
+<footer>
+© 2026
+<p>تم تنفيذ الموقع بواسطة: فجر العيوني</p>
+</footer>
+
+<button class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+    } else {
+        localStorage.setItem("mode", "light");
+    }
+}
+window.onload = function() {
+    if(localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+}
+</script>
+
+</body>
+</html>

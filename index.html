@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل التأهيل الشامل</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="toggle-container">
+    <div class="toggle" onclick="toggleDarkMode()"></div>
+</div>
+
+<h1>دليل التأهيل الشامل</h1>
+
+<nav>
+    <a href="index.html" class="active">الرئيسية</a>
+    <a href="articles.html">المقالات</a>
+    <a href="exercises.html">التمارين</a>
+    <a href="tips.html">النصائح</a>
+    <a href="contact.html">تواصل</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="hero">
+    <h2>نحو تأهيل أفضل وحياة أكثر جودة</h2>
+    <p>معلومات توعوية وتمارين ونصائح مبسطة لدعم المستفيدين وأسرهم</p>
+</div>
+
+<div class="row">
+<div class="card small-card">
+    <h3><i class="fa-solid fa-book-medical"></i> المقالات</h3>
+    <p class="small-text">معلومات طبية مبسطة</p>
+</div>
+
+<div class="card small-card">
+    <h3><i class="fa-solid fa-dumbbell"></i> التمارين</h3>
+    <p class="small-text">تمارين منزلية معتمدة</p>
+</div>
+
+<div class="card small-card">
+    <h3><i class="fa-solid fa-lightbulb"></i> النصائح</h3>
+    <p class="small-text">إرشادات يومية مفيدة</p>
+</div>
+
+</div>
+
+<div class="card">
+<h3>معلومة سريعة</h3>
+<p>
+تشير الدراسات إلى أن التدخل المبكر في حالات تأخر النطق
+يساعد بشكل كبير في تحسين مهارات التواصل والنتائج المستقبلية.
+</p>
+</div>
+
+<div class="card">
+<h3>متى يجب مراجعة المختص؟</h3>
+<p>
+إذا لوحظ تأخر واضح في النطق أو الحركة مقارنة بالعمر المتوقع،
+فإن التقييم المبكر يساعد في تحسين فرص التطور.
+</p>
+</div>
+
+<div class="card">
+<h3>الأسئلة الشائعة</h3>
+
+<p class="faq-question">هل كل تأخر نطق يعني مشكلة؟</p>
+<p>ليس دائمًا، لكن التقييم المبكر مهم.</p>
+
+<p class="faq-question">متى يبدأ الطفل بالكلام؟</p>
+<p>غالبًا يبدأ بكلمات بسيطة بين عمر سنة إلى سنتين.</p>
+
+<p class="faq-question">هل العلاج الطبيعي مناسب لكل الأعمار؟</p>
+<p>نعم حسب تقييم الحالة واحتياجها.</p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026
+<p>تم تنفيذ الموقع بواسطة: فجر العيوني</p>
+<p>هذا الموقع لأغراض تعليمية ولا يغني عن استشارة المختصين</p>
+</footer>
+
+<button class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+    } else {
+        localStorage.setItem("mode", "light");
+    }
+}
+
+window.onload = function() {
+    if(localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+}
+</script>
+
+</body>
+</html>
