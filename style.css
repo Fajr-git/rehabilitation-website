@@ -256,21 +256,23 @@ footer {
 }
 
 @media (max-width: 768px) {
-    
-    .div.container .div.row, .navbar, .nav-container {
+    header nav {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5px;
-        padding: 10px 5px;
-        overflow-x: auto;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        gap: 4px !important;
+        padding: 8px 4px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    .div.row a, .navbar a, li a, .nav-item {
-        font-size: 11px !important;
-        padding: 4px 5px !important;
-        white-space: nowrap;
+    header nav a {
+        font-size: 12px !important;
+        padding: 6px 4px !important;
+        white-space: nowrap !important;
+        flex: 1 !important;
+        text-align: center !important;
     }
 }
