@@ -255,4 +255,22 @@ footer {
     color: #8a8787;
 }
 
+@media (max-width: 768px) {
+    
+    .div.container .div.row, .navbar, .nav-container {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 5px;
+        overflow-x: auto;
+    }
 
+    .div.row a, .navbar a, li a, .nav-item {
+        font-size: 11px !important;
+        padding: 4px 5px !important;
+        white-space: nowrap;
+    }
+}
